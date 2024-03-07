@@ -4,9 +4,10 @@
 }
 
 #reform {
+    display: block;
+    margin:0 auto;
     padding: 15px 20px;
-    border: border-radius 4px;
-    margin: 16px;
+    border-radius: 4px;
     width: 50%;
     background-color: #f7f7f7;
 }

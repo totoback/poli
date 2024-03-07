@@ -51,10 +51,17 @@ const menu = [
 
 console.log(menu)
 
-const filterBtn = document.querySelectorAll('filter-btn')
+const filterBtn = document.querySelectorAll(".btn-container button")
 
-filterBtn.forEach(function(btn){
-    btn.addEventListener("click", function(){
-        const 
+filterBtn.forEach(function(btn) {
+    const category = btn.dataset.name;
+    btn.innerText = category
+    btn.addEventListener("click", function(e){
+        
+        const menuCategory = menu.filter(function(menuItem){
+            if(category === "all"){
+                return true;
+            }else if()
+        }
     })
 })
