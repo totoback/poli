@@ -5,9 +5,13 @@
 
 #reform {
     display: block;
-    margin:0 auto;
-    padding: 15px 20px;
+    margin: auto;
+    padding: 40px 40px;
     border-radius: 4px;
     width: 50%;
     background-color: #f7f7f7;
+}
+
+.login-box1 {
+    padding: 16px;
 }
