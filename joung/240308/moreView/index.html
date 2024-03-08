@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더보기</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js" /></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    .bx {
+        display: none;
+    }
+    .bx.active {
+        display: block;
+    }
+    .bx:after {
+        display: none;
+    }
+    .btn-wrap {
+        display: block;
+    }
+    ul{list-style: none;}
+    ul.menu{display: flex;flex-wrap:wrap;padding-left: 0;}
+    ul.menu li { height:100px;list-style:none;  position:relative; float:left; width:calc(100%/3 - 12px); margin:12px 6px 0;background: #f7f7f7;}
+    .more {margin-bottom: 10px;font-size: 14px;width:100%; line-height:30px; color:#72af2c;font-size:18px;font-weight:700;text-align:center;border:1px solid #72af2c;border-radius:6px;display:block;}
+    </style>
+<body>
+    <div class="main">
+        <ul class="row menu">
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+            <li class="col-3 bx"></li>
+        </ul>
+        <button class="more" id="js-btn-wrap">더보기</button>
+        <button class="more" id="js-btn-wrap2" onClick="allBtn()">전체보기</button>
+    </div>
+
+    <!-- script -->
+    <script>
+        $(window).on('load', function () {
+            load('.main', '3'); //로드될때 3개만 보여주기
+            
+            $("#js-btn-wrap").on("click", function () {
+                load('.main', '2', '#js-btn-wrap');//박스, 추가할 컨텐츠 수, 버튼
+            })
+        });
+        //더보기 버튼
+        function load(id, cnt, btn) {
+            let girls_list = id + " .bx:not(.active)";
+            let girls_length = $(girls_list).length;
+            let girls_total_cnt;
+            if (cnt < girls_length) {
+                girls_total_cnt = cnt;
+            } else {
+                girls_total_cnt = girls_length;
+                $(btn).hide();
+            }
+            $(girls_list + ":lt(" + girls_total_cnt + ")").addClass("active");
+        }
+
+        //전체 버튼
+        function allBtn(){
+            const btn = document.querySelector("#js-btn-wrap2");
+            const bxAll = document.querySelectorAll(".bx")
+            btn.addEventListener("click",function(){
+                bxAll.forEach(function (btn){
+                    btn.classList.add("active");
+                })
+            })
+        }
+    </script>
+</body>
+</html>
