@@ -1,0 +1,71 @@
+
+
+:root{
+	--primary1: #00BD6E; /*메인컬러*/
+	/*--sub1: 서브컬러;
+	--bg1: 배경;*/
+
+	--error:#FF5B5B; /*주황색*/
+	--desc:#FA10FF; /*핑크색*/
+	--like:#E50000; /*빨간색*/
+
+	/*그레이스케일*/
+	--00: #000;
+	--05: #0D0D0D;
+	--10: #1A1A1A;
+	--15: #262626;
+	--20: #333333;
+	--30: #4C4C4C;
+	--40: #666666;
+	--50: #808080;
+	--60: #999999;
+	--70: #B3B3B3;
+	--80: #CCCCCC;
+	--90: #E6E6E6;
+	--95: #F2F2F2;
+	--97: #F7F7F7;
+	--100: #FFFFFF;
+}
+/* .btn-wrap .btn{border:1px solid #e1e1e1;padding:10px;border-radius:4px;}
+.inner{width: 100%;margin:200px auto;max-width: 1280px;}
+.history-con.active,.year-tit .tit.active{display: block;}
+.history-con,.year-tit .tit{display: none}
+.abt_history .c-12{margin-bottom: 40px;}
+.year-grp {display: flex;gap:18px}
+.year-grp .year-btn{cursor: pointer;font-size: 20px;font-weight: 500;color:var(--30);padding:16px 28px;border-radius:4px;border:1px solid var(--80)}
+.year-grp .year-btn.active{border:none; background: var(--primary1);color:#fff}
+.con-grp{padding-top:15px}
+.con-grp li{margin-bottom: 24px;display: flex;gap: 15px;font-size: 20px;font-weight: 500;color:var(--05);}
+.con-grp li span{color:var(--primary1);font-size: 20px;font-weight: 500;}
+.year-tit .tit{font-size: 48px;font-weight: 700;color:var(--05)}
+.btn-wrap{cursor: pointer;margin-top: 32px;display: flex;gap:10px}
+.btn-wrap .prev-btn img{rotate: 180deg;}
+.line-row{padding-top:40px;border-top:1px solid var(--90)}
+
+.m60{margin:60px 0}
+.mb30{margin:30px 0}
+.sub-tit{margin-bottom: 32px;gap:12px;font-size: 22px;font-weight: 600;color:var(--05);display: flex;align-items: center;}
+.bar-line{width:8px;height: 22px;background-color: var(--primary1); display: inline-block;}
+.skill-bx{display: flex;align-items: center;justify-content: center;flex-direction: column;gap:20px}
+.skill-bx span{font-size: 18px;font-weight: 400;color:var(--05)}
+.section6 .c-12{margin-bottom: 50px;}
+.fc-bx{display: flex;flex-direction: column;gap:15px}
+.fc-bx img{width: 100%;} */
+
+
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUITE/fonts/static/woff2/SUITE.css');
+
+:root{--primary:#ff9700}
+
+#atc02{height:1200px;font-family:'SUITE', sans-serif}
+#atc02 .l_bnr li{overflow:hidden;position:sticky;top:10px;display:flex;flex-wrap:wrap;align-content:space-between;width:100%;height:150px;padding:50px 0 50px 50px;border-radius:20px;color:#fff;background-size:cover;background-image:url(https://source.unsplash.com/random/?idea);background-size:cover;background-position:center}
+#atc02 .l_bnr li:nth-child(2){transform:translateY(70px);background:url(https://source.unsplash.com/random/?operation)}
+#atc02 .l_bnr li:nth-child(3){transform:translateY(140px);background-image:url(https://source.unsplash.com/random/?business)}
+#atc02 .l_bnr .r_txt{position:absolute;top:30px;right:40px;font-size:13px;font-weight:800;text-align:right;text-transform:uppercase}
+#atc02 .l_bnr li>div{width:100%}
+#atc02 .l_bnr div p{margin-bottom:15px;font-size:25px;font-weight:700;line-height:1.2;white-space:pre-line}
+#atc02 .l_bnr div>div{opacity:.5}
+
+
+
+Resources1× 0.5× 0.25×Rerun
