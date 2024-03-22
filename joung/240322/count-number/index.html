@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <script src="./jquery.min.js"></script>
+    <script src="./app.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <article id="inc02">
+        <div class="tit_area">
+            <p>Information</p>
+            <div class="pl">생명공학 분야의 선두주자로서 신뢰성 있는 
+            제품과 서비스를 제공합니다.</div>
+        </div>
+        <ul>
+          <li>
+              <p><span class="counting" data-count="82">0</span><i>%</i></p>
+                <p class="tit">연평균 성장률</p>
+                <div>지속적인 성장을 통해 (2022년 말 기준)
+          82%의 성장을 기록했습니다.</div>
+            </li>
+          <li>
+              <p><span class="counting" data-count="65">0</span></p>
+                <p class="tit">협력국가</p>
+                <div>세계가 인정한 우수한 기술력.
+          세계 65 개국 교역</div>
+            </li>
+          <li>
+              <p><span class="counting" data-count="5230">0</span></p>
+                <p class="tit">연구/분석 건수</p>
+                <div>지속적인 성장을 통해 (2022년 말 기준)
+                82%의 성장을 기록했습니다.</div>
+          </li>
+        </ul>
+    </article>
+    <script>
+        $('.counting').each(function() {
+            // 카운팅인 모든 요소에 대해 함수를 실행
+            var $this = $(this), // 현재 요소를 jQuery 객체로 저장
+                countTo = $this.attr('data-count'); // 'data-count' 속성 값을 가져와 countTo 변수에 저장
+
+            $({ countNum: $this.text()}).animate(
+                {
+                    countNum: countTo // countNum 객체를 사용하여 시작 숫자를 현재 요소의 텍스트로 설정
+                },
+                {
+                    duration: 3000, // 애니메이션의 지속 시간
+                    easing:'linear',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() { // 애니메이션이 완료되었을 때 실행되는 콜백 함수
+                        $this.text(this.countNum); // 최종 값 
+                        // alert('finished');
+                    }
+                }
+            );  
+        });
+    </script>
+    <article id="inc03" data-aos="fade-up" class="aos-init aos-animate">
+        <div class="tit_area aos-init aos-animate" data-aos="fade-up">
+            <p>
+                고객과 함께 성장하고
+                <span>차별적 기술 확보를 통한 경쟁력 향상</span>
+            </p>
+            <div>지속적인 개선 프로세스를 통해 최신 기술과 효율적인 방법을 적극적으로 도입하여
+            고객들에게 더 나은 경험을 제공하고자 노력하고 있습니다. </div>
+        </div>
+        <ul>
+            <li data-aos="fade-left" class="aos-init aos-animate">
+                <a href="">
+                    <div class="txt">
+                        <span>R&amp;D Capabilities</span>
+                        <p>기술개발력</p>
+                    </div>
+                    <img src="https://source.unsplash.com/446x580/?R&D" alt="기술개발력">
+                </a>
+            </li>
+            <li data-aos="fade-left" data-aos-delay="300" class="aos-init aos-animate">
+                <a href="">
+                    <div class="txt">
+                        <span>Precision Processing</span>
+                        <p>정밀가공기술</p>
+                    </div>
+                    <img src="https://source.unsplash.com/446x580/?Precision" alt="정밀가공기술">
+                </a>
+            </li>
+            <li data-aos="fade-left" data-aos-delay="600" class="aos-init aos-animate">
+                <a href="">
+                    <div class="txt">
+                        <span>Production Technology</span>
+                        <p>생산기술</p>
+                    </div>
+                    <img src="https://source.unsplash.com/446x580/?Technology" alt="생산기술">
+                </a>
+            </li>
+            <li data-aos="fade-left" data-aos-delay="900" class="aos-init aos-animate">
+                <a href="">
+                    <div class="txt">
+                        <span>Quality Assurance</span>
+                        <p>품질관리 시스템</p>
+                    </div>
+                    <img src="https://source.unsplash.com/446x580/?Assurance" alt="품질관리 시스템">
+                </a>
+            </li>
+        </ul>
+    </article>
+</body>
+</html>
